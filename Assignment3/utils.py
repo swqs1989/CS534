@@ -612,8 +612,10 @@ def expr(x):
     ((P & Q) ==> Q)
     """
     if isinstance(x, str):
+        print("1")
         return eval(expr_handle_infix_ops(x), defaultkeydict(Symbol))
     else:
+        print("2")
         return x
 
 
@@ -627,6 +629,7 @@ def expr_handle_infix_ops(x):
     """
     for op in infix_ops:
         x = x.replace(op, '|' + repr(op) + '|')
+    print(type(x))
     return x
 
 

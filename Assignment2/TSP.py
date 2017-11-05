@@ -472,7 +472,7 @@ if option == 1:
         la = localagent(a)
         la.genmatrix()
         start = time.time()
-        la.genetic(100000)
+        la.genetic()
         end = time.time()
         hc.append(end - start)
         print("Total time used: %r" % (end - start))
